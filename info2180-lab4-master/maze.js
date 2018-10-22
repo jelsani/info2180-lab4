@@ -2,7 +2,7 @@ var div = document.querySelector("#div");
 var delta = 10; // the thickness of the hovered border area
 
 div.onmousemove = function(e) {
-    var rect = div.getBoundingClientRect();
+    var rect = div.maze();
     var x = e.clientX - rect.left,      // the relative mouse postion to the element
         y = e.clientY - rect.top,       // ...
         w = rect.right - rect.left,     // width of the element
@@ -19,6 +19,7 @@ div.onmousemove = function(e) {
    else                                 // otherwise
        div.style.cursor = "pointer";    // set to pointer
 }
+
 #div {
   background-color: red;
   width: 100px;
