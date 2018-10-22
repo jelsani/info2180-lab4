@@ -1,10 +1,10 @@
 var border = document.getElementById("maze");
 
-var bor = 4;
+var bor = 1;
 
-border.onclick = function(e) {
+border.mouseover = function(e) {
   if (e.target !== e.currentTarget) return;
-  console.log("border-clicked")
+  console.log("You Lose")
 }
 
 border.onmouseover = function(e) {
